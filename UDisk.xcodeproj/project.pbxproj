@@ -15,6 +15,12 @@
 		B8A8863A1D59A1C500459CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A886381D59A1C500459CE7 /* LaunchScreen.storyboard */; };
 		B8A886451D59A1C500459CE7 /* UDiskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A886441D59A1C500459CE7 /* UDiskTests.m */; };
 		B8A886501D59A1C500459CE7 /* UDiskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8864F1D59A1C500459CE7 /* UDiskUITests.m */; };
+		B8A8865F1D59A1D600459CE7 /* FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8865E1D59A1D600459CE7 /* FileSystem.m */; };
+		B8A886681D59A88B00459CE7 /* FileItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A886671D59A88B00459CE7 /* FileItemModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B8A8866B1D59AAB200459CE7 /* FileIO.c in Sources */ = {isa = PBXBuildFile; fileRef = B8A886691D59AAB200459CE7 /* FileIO.c */; };
+		B8A8866E1D59AAD700459CE7 /* EADSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8866D1D59AAD700459CE7 /* EADSessionController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B8A886731D59B72A00459CE7 /* Filelist.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A886711D59B72A00459CE7 /* Filelist.m */; };
+		B8A886741D59B72A00459CE7 /* Filelist.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A886721D59B72A00459CE7 /* Filelist.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,17 @@
 		B8A8864B1D59A1C500459CE7 /* UDiskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDiskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A8864F1D59A1C500459CE7 /* UDiskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDiskUITests.m; sourceTree = "<group>"; };
 		B8A886511D59A1C500459CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A8865D1D59A1D600459CE7 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
+		B8A8865E1D59A1D600459CE7 /* FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystem.m; sourceTree = "<group>"; };
+		B8A886661D59A88B00459CE7 /* FileItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileItemModel.h; sourceTree = "<group>"; };
+		B8A886671D59A88B00459CE7 /* FileItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileItemModel.m; sourceTree = "<group>"; };
+		B8A886691D59AAB200459CE7 /* FileIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileIO.c; sourceTree = "<group>"; };
+		B8A8866A1D59AAB200459CE7 /* FileIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIO.h; sourceTree = "<group>"; };
+		B8A8866C1D59AAD700459CE7 /* EADSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EADSessionController.h; sourceTree = "<group>"; };
+		B8A8866D1D59AAD700459CE7 /* EADSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EADSessionController.m; sourceTree = "<group>"; };
+		B8A886701D59B72A00459CE7 /* Filelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filelist.h; sourceTree = "<group>"; };
+		B8A886711D59B72A00459CE7 /* Filelist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filelist.m; sourceTree = "<group>"; };
+		B8A886721D59B72A00459CE7 /* Filelist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Filelist.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,7 @@
 		B8A886291D59A1C500459CE7 /* UDisk */ = {
 			isa = PBXGroup;
 			children = (
+				B8A886751D59BD1000459CE7 /* Filesystem */,
 				B8A8862D1D59A1C500459CE7 /* AppDelegate.h */,
 				B8A8862E1D59A1C500459CE7 /* AppDelegate.m */,
 				B8A886301D59A1C500459CE7 /* ViewController.h */,
@@ -138,6 +156,24 @@
 				B8A886511D59A1C500459CE7 /* Info.plist */,
 			);
 			path = UDiskUITests;
+			sourceTree = "<group>";
+		};
+		B8A886751D59BD1000459CE7 /* Filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				B8A8865D1D59A1D600459CE7 /* FileSystem.h */,
+				B8A8865E1D59A1D600459CE7 /* FileSystem.m */,
+				B8A886661D59A88B00459CE7 /* FileItemModel.h */,
+				B8A886671D59A88B00459CE7 /* FileItemModel.m */,
+				B8A886691D59AAB200459CE7 /* FileIO.c */,
+				B8A8866A1D59AAB200459CE7 /* FileIO.h */,
+				B8A8866C1D59AAD700459CE7 /* EADSessionController.h */,
+				B8A8866D1D59AAD700459CE7 /* EADSessionController.m */,
+				B8A886701D59B72A00459CE7 /* Filelist.h */,
+				B8A886711D59B72A00459CE7 /* Filelist.m */,
+				B8A886721D59B72A00459CE7 /* Filelist.xib */,
+			);
+			name = Filesystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +243,7 @@
 				TargetAttributes = {
 					B8A886261D59A1C500459CE7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RZJX863SMT;
 					};
 					B8A8863F1D59A1C500459CE7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -244,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8A8863A1D59A1C500459CE7 /* LaunchScreen.storyboard in Resources */,
+				B8A886741D59B72A00459CE7 /* Filelist.xib in Resources */,
 				B8A886371D59A1C500459CE7 /* Assets.xcassets in Resources */,
 				B8A886351D59A1C500459CE7 /* Main.storyboard in Resources */,
 			);
@@ -270,7 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A8865F1D59A1D600459CE7 /* FileSystem.m in Sources */,
+				B8A886731D59B72A00459CE7 /* Filelist.m in Sources */,
+				B8A886681D59A88B00459CE7 /* FileItemModel.m in Sources */,
 				B8A886321D59A1C500459CE7 /* ViewController.m in Sources */,
+				B8A8866E1D59AAD700459CE7 /* EADSessionController.m in Sources */,
+				B8A8866B1D59AAB200459CE7 /* FileIO.c in Sources */,
 				B8A8862F1D59A1C500459CE7 /* AppDelegate.m in Sources */,
 				B8A8862C1D59A1C500459CE7 /* main.m in Sources */,
 			);
@@ -415,10 +458,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = UDisk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.UDisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +475,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = UDisk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.UDisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -498,6 +553,7 @@
 				B8A886561D59A1C500459CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8A886571D59A1C500459CE7 /* Build configuration list for PBXNativeTarget "UDiskTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +562,7 @@
 				B8A886591D59A1C500459CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8A8865A1D59A1C500459CE7 /* Build configuration list for PBXNativeTarget "UDiskUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +571,7 @@
 				B8A8865C1D59A1C500459CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
